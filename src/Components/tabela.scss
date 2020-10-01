@@ -1,0 +1,42 @@
+.table {
+    overflow-x: hidden;
+    width: 800px;
+    max-width: 85%;
+    margin: 20px;
+
+}
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+thead {
+    border: 1px solid #fff;
+    color: #fff;
+    mix-blend-mode: luminosity;
+    text-shadow: 0px 0px 5px #928888;
+}
+tbody {
+    color: #000;
+
+}
+thead th {
+    height: 40px;
+}
+tbody tr {
+    background: #fff;
+    height: 50px;
+    border-bottom: 1px solid #fff;
+    transform-origin: bottom;
+    font-size: 1.3rem;
+}
+thead th td,  tbody tr td {
+    padding: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .table {
+        overflow-x: scroll;
+    }
+}

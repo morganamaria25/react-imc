@@ -1,0 +1,99 @@
+.form-wrapper {
+    border: 1px solid transparent;
+    width: 450px;
+    padding: 5px;
+    max-width: 85%;
+    margin-top: calc(100vw - 95%);
+    max-height: 75px;
+    transition: all 1s;
+    box-sizing: border-box;
+    transition-timing-function: cubic-bezier(0.15, 0.6, 0.56, 1.21);
+    height: 100%;
+        &:focus-within,
+        &:hover {
+            max-height: 500px;
+            transform: rotateX(0deg);
+            background-color: #fff;
+            color: #f1f1f1;
+                & .novoUsuario-btn {
+                    background-color: #C71585;
+                }
+                & .inner-form-wrapper {
+                    opacity: 1;
+                    overflow: visible;
+                    max-height: 100%;
+                    transform: rotateX(0deg)
+                }
+        }
+}
+.calc-imc{
+    text-align: center;
+    color: #fff;
+    background-color: #C71585;
+    padding: 5px;
+        & p {
+            margin: 10px;
+            cursor: pointer;
+        }
+}
+.inner-form-wrapper {
+    opacity: 0;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transform: rotateX(-90deg);
+    perspective-origin: top;
+    transform-origin: top;
+    transition: all 1.3s, opacity 1s ease-in;
+    transition-timing-function: cubic-bezier(0.15, 0.6, 0.6, 1.47);
+}
+form {
+    
+    display: flex;
+    flex-direction: column;
+    color: #999;
+    justify-content: space-evenly;
+}
+
+label {
+    margin: 15px 0 5px 0;
+}
+
+input {
+    background: #f1f1f1;
+    border: 1px solid transparent;
+    color: #C71585;
+    line-height: 32px;
+    padding: 0 5px;
+    font-size: 20px;
+    font-family: 'Spartan', sans-serif;
+    cursor: pointer;
+        &:focus-within {
+            border: none;
+        }
+}
+.buttons {
+    position: relative;
+    height: 50px;
+    margin-top: 20px;
+}
+input[type="submit"]{   
+    padding: 7px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 23px;
+    transition: all ease .35s;
+    position: absolute;
+    width: 100%;
+    transition: opacity .45s;
+        &:nth-child(1) {
+            background: #C71585;
+            color: #fff;
+            opacity: 1;
+        }
+        &:nth-child(2) {
+            background: #C71585;
+            color: white;
+            opacity: 0;
+        }
+}
+
+
